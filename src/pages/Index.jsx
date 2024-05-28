@@ -1,8 +1,8 @@
 import { Container, VStack, Box, Text, Flex, Spacer, Button, Spinner, Alert, AlertIcon } from "@chakra-ui/react";
-import { useFoo } from "../integrations/supabase/index.js";
+import { useFoos } from "../integrations/supabase/index.js";
 
 const Index = () => {
-  const { data, error, isLoading } = useFoo();
+  const { data, error, isLoading } = useFoos();
 
   if (isLoading) return <Spinner />;
   if (error) return (
